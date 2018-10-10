@@ -85,7 +85,7 @@ a {
 }
 
 .btn-small {
-    padding: 15px 40px;
+    padding: 17px 40px;
     border-radius: 25px;
     display: inline-block;
     font-family: 'GothaProBol', sans-serif;
@@ -113,10 +113,14 @@ a {
     background-color: #ebb03d;
 }
 
-.btn .fas,
+.btn .fas {
+    margin-left: 6px;
+    font-size: 15px;
+}
+
 .btn-small .fas {
     margin-left: 15px;
-    font-size: 23px;
+    font-size: 22px;
 }
 
 .black-btn {
@@ -148,8 +152,37 @@ a {
     display: none;
 }
 
-.catalog li + li {
-    margin-left: 20px;
+.catalog {
+    margin-right: 140px;
+}
+
+.catalog > li + li {
+    margin-left: 33px;
+}
+
+.catalog > li,
+.option > li {
+    position: relative;
+}
+
+.catalog-content,
+.option-item {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    min-width: 110%;
+    top: 100%;
+    left: 0;
+}
+
+.catalog-content li,
+.option-item li {
+    padding: 10px 5px 10px 0;
+}
+
+.catalog-content li:first-child,
+.option-item li:first-child {
+    padding-top: 20px;
 }
 
 .catalog a {
@@ -165,21 +198,27 @@ a {
 .catalog a:hover {
     color: #ebb03d;
 }
+
+.catalog li:hover .catalog-content,
+.option li:hover .option-item {
+    display: block;
+}
+
 .catalog a:hover .fas {
     color: #000;
 }
 
-
-.option {
-    margin-left: 50px;
-}
-
-.option li + li {
-    margin-left: 10px;
+.option > li + li {
+    margin-left: 25px;
 } 
 
 .option a {
     text-transform: uppercase;
+    transition: color 0.2s ease-in;
+}
+
+.option a:hover {
+    color: #ebb03d;
 }
 
 .option .fas {
@@ -187,7 +226,15 @@ a {
 }
 
 .search {
-    margin-left: 50px;
+    margin-left: 56px;
+}
+
+.search a {
+    transition: color 0.2s ease-in;
+}
+
+.search a:hover {
+    color: #ebb03d;
 }
 
 .search .fas {
@@ -195,8 +242,16 @@ a {
 }
 
 .user-control {
-    margin-left: 27px;
-    margin-right: 25px;
+    margin-left: 30px;
+    margin-right: 28px;
+}
+
+.user-control a {
+    transition: color 0.2s ease-in;
+}
+
+.user-control a:hover {
+    color: #ebb03d;
 }
 
 .user-control li {
@@ -219,7 +274,7 @@ a {
 }
 
 .user-control li + li {
-    margin-left: 35px;
+    margin-left: 45px;
 }
 
 .user-control .fas {
@@ -245,7 +300,7 @@ a {
   height: 3px;
   width: 100%;
   background: #333333;
-  border-radius: 1px;
+  border-radius: 2px;
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
@@ -305,6 +360,7 @@ a {
 }
 
 .menu__links {
+    padding-top: 80px;
     position: fixed;
     display: none;
     top: 0;
@@ -317,7 +373,6 @@ a {
 }
 
 .menu__links-item {
-    margin-top: 80px;
     font-family: 'GothaProBla', sans-serif;
     font-size: 18px;
     display: block;
@@ -352,7 +407,6 @@ a {
 }
 
 .lower_menu {
-    margin-top: 20px;
     font-family: 'GothaProBla', sans-serif;
     font-size: 14px;
     display: block;
@@ -360,6 +414,10 @@ a {
     text-align: center;
     color: #171717;
     transition: transform 0.1s ease-in;
+}
+
+.menu__links .lower_menu {
+    margin-top: 20px;
 }
 
 .menu__links-item:hover,
@@ -373,12 +431,33 @@ a {
     margin-top: 0;
 }
 
+/* .menu__links > li {
+    position: relative;
+} */
+
+.submenu-item {
+    display: none;    
+}
+
+.submenu-item a {
+    font-size: 16px;
+    transition: color 0.3s ease-in;
+}
+
+.submenu-item a:hover {
+    color: #fff;
+}
+
+.menu__links > li:hover .submenu-item {
+    display: block;
+}
+
 
 input[type=text] {
     display: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1320px) {
     .catalog {
         display: none;
     }
@@ -553,11 +632,6 @@ input[type=text] {
 }
 
 @media screen and (max-width: 768px) {
-    .btn {
-        padding: 15px 20px;
-        border-radius: 15px;
-    }
-    
     .descriptions {
         height: auto;
         padding-bottom: 15px;
@@ -831,6 +905,11 @@ input[type=text] {
         margin: 0;
         order: 2;
     }
+
+    .btn {
+        padding: 25px 25px;
+        border-radius: 30px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -842,9 +921,11 @@ input[type=text] {
         text-align: center;
     }
 }
-
-
-
-
-
 /* footer end */
+
+/* scroll */
+
+#ascrail2000 div {
+    right: 30px;
+}
+
