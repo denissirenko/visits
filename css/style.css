@@ -821,7 +821,7 @@ input[type=text] {
 }
 
 .footer-bottom {
-    padding: 15px 0 25px;
+    padding: 5px 0 10px;
 }
 
 .copy {
@@ -923,9 +923,4 @@ input[type=text] {
 }
 /* footer end */
 
-/* scroll */
-
-#ascrail2000 div {
-    right: 30px;
-}
 

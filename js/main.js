@@ -18,9 +18,9 @@
 
 $('.product-list').slick({
 	slidesToShow: 3,
-	// infinite: true,
-	// autoplay: true,
-	// autoplaySpeed: 3000,
+	infinite: true,
+	autoplay: true,
+	autoplaySpeed: 3000,
   cssEase: 'linear',
 	prevArrow: '<div class="slick-prev slick-arrow"><div class="carousel-button"><i class="fas fa-chevron-left"></i></div></div>',
   nextArrow: '<div class="slick-next slick-arrow"><div class="carousel-button"><i class="fas fa-chevron-right"></i></div></div>',
@@ -47,7 +47,7 @@ $(document).ready(
       $("body").niceScroll({
         cursorcolor: "#f2b743",
         cursoropacitymin: "0.6",
-        cursorwidth: "1px",
+        cursorwidth: "10px",
         cursorborder: "1px solid #f2b743",
         cursorborderradius: "1px",
         background: "#f1f1f1",
